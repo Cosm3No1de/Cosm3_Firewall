@@ -29,16 +29,19 @@
 
 ### 📥 Descarga la Aplicación (APK)
 
-La última versión estable está disponible en la sección **[Releases]** de este repositorio:
+La última versión estable está disponible a continuación. **Recomendamos descargar la v2.0 para la mejor experiencia:**
 
-* [Descargar Cosme-Firewall-v1.0.0.apk](https://www.mediafire.com/file/12af7ujb0hgpphq/Cosm3_Firewall_v2.apk/file) *(Reemplaza con el enlace real)*
+| Versión | Enlace de Descarga |
+| :--- | :--- |
+| **v2.0 (Recomendada)** | [Descargar Cosme Firewall v2.0 (APK)](https://www.mediafire.com/file/12af7ujb0hgpphq/Cosm3_Firewall_v2.apk/file) |
+| v1.0 | [Descargar Cosme-Firewall-v1.0.0.apk](URL-al-APK-en-Release) *(Si aún está disponible)* |
 
 **Pasos de Instalación:**
 
-1.  Descarga el archivo `Cosme-Firewall.apk` en tu dispositivo Android.
+1.  Descarga el archivo APK en tu dispositivo Android.
 2.  Asegúrate de tener habilitada la opción "Instalar aplicaciones de fuentes desconocidas".
 3.  Instala el APK.
-4.  Al abrir, **debes aceptar la solicitud de conexión VPN** para que el firewall sin Root pueda operar.
+4.  Al abrir, **debes aceptar la solicitud de conexión VPN** para que el firewall sin Root pueda operar. 
 
 ### ⚙️ Compilar desde el Código Fuente
 
@@ -75,4 +78,6 @@ Este proyecto está bajo la Licencia **GPLv3**. Consulta el archivo [LICENSE](LI
 
 ---
 
-**Siguiente paso:** Para que los reclutadores puedan descargar y probar tu APK, necesitas subirla a la sección **Releases** de tu repositorio. ¿Quieres que te muestre cómo se hace?
+He puesto el enlace de descarga en una **tabla Markdown** para que sea más claro y destaque mejor la versión más reciente.
+
+Ahora tienes un `README.md` muy completo y profesional. ¿Hay algo más que te gustaría añadir o pulir antes de subirlo a tu repositorio?
