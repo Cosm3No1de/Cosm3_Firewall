@@ -31,7 +31,7 @@
 
 La última versión estable está disponible en la sección **[Releases]** de este repositorio:
 
-* [Descargar Cosme-Firewall-v1.0.0.apk](URL-al-APK-en-Release) *(Reemplaza con el enlace real)*
+* [Descargar Cosme-Firewall-v1.0.0.apk](https://www.mediafire.com/file/12af7ujb0hgpphq/Cosm3_Firewall_v2.apk/file) *(Reemplaza con el enlace real)*
 
 **Pasos de Instalación:**
 
