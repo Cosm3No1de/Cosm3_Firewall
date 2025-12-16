@@ -17,7 +17,6 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        // Cambiamos a Manrope
                         sans: ['Manrope', 'sans-serif'],
                         mono: ['JetBrains Mono', 'monospace'],
                     },
@@ -61,6 +60,7 @@
             background-size: 50px 50px;
         }
 
+        /* Estilo base para las tarjetas */
         .cyber-card {
             background-color: #10141A;
             border: 1px solid rgba(255, 56, 100, 0.1);
@@ -68,12 +68,14 @@
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
+        /* Efecto hover */
         .cyber-card:hover {
             border-color: #FF3864;
             transform: translateY(-4px);
             box-shadow: 0 10px 25px rgba(255, 56, 100, 0.2);
         }
 
+        /* Estilo para el botón de Plasma */
         .btn-plasma {
             position: relative;
             z-index: 10;
@@ -86,12 +88,14 @@
             box-shadow: 0 0 10px rgba(255, 56, 100, 0.5);
         }
 
+        /* Efecto hover en el botón */
         .btn-plasma:hover {
             background-color: #05070A;
             color: #FF3864;
             box-shadow: 0 0 20px rgba(255, 56, 100, 0.8);
         }
 
+        /* Efecto de degradado en el título */
         .title-effect {
             background: linear-gradient(90deg, #FFFFFF, #FF3864);
             -webkit-background-clip: text;
@@ -141,19 +145,19 @@
                     class="relative w-32 h-32 rounded-3xl border-4 border-brand-accent shadow-2xl transition-transform duration-300 object-cover bg-brand-card flex items-center justify-center group-hover:rotate-1 group-hover:scale-[1.03]">
             </a>
 
-            <h1 class="text-7xl sm:text-8xl font-extrabold tracking-tight mb-4 uppercase">
+            <h1 class="text-6xl sm:text-7xl md:text-8xl font-extrabold tracking-tight mb-4 uppercase">
                 <span class="title-effect">COSM3_FIREWALL</span>
-                <span class="block text-brand-secondary/80 mt-4 font-light text-4xl">DEFENSA MÓVIL ACTIVA</span>
+                <span class="block text-brand-secondary/80 mt-4 font-light text-3xl sm:text-4xl">DEFENSA MÓVIL ACTIVA</span>
             </h1>
 
-            <p class="text-xl text-brand-text/70 max-w-3xl mx-auto mb-10 font-normal leading-relaxed">
+            <p class="text-base sm:text-xl text-brand-text/70 max-w-3xl mx-auto mb-10 font-normal leading-relaxed">
                 El Firewall de Capa 7 redefinido. **Bloquea el tráfico malicioso**, monitorea las conexiones ocultas y
                 **aisla las amenazas** en tiempo real. Máxima privacidad, latencia mínima.
             </p>
 
-            <div class="flex flex-col items-center gap-4 max-w-sm mx-auto w-full">
+            <div class="flex flex-col items-center gap-4 max-w-xs sm:max-w-sm mx-auto w-full">
 
-                <a href="https://www.mediafire.com/file/12af7ujb0hgpphq/Cosm3_Firewall+v2.apk/file" target="_blank"
+                <a href="https://www.mediafire.com/file/12af7ujb0hgpphq/Cosm3_Firewall_v2.apk/file" target="_blank"
                     class="group relative w-full flex items-center justify-between p-1 rounded-lg btn-plasma hover:shadow-brand-accent/70 transition-all duration-300 transform hover:-translate-y-1">
                     <div
                         class="w-full h-14 bg-brand-dark rounded-[5px] flex items-center justify-between px-6 transition-all border border-brand-accent/0 group-hover:border-brand-accent/50">
@@ -161,7 +165,7 @@
                             <span
                                 class="text-xs font-mono font-medium text-brand-accent uppercase tracking-widest">PROTOCOLO
                                 DE DESPLIEGUE</span>
-                            <span class="font-extrabold text-brand-text text-xl">DESCARGA VERSIÓN 1.0</span>
+                            <span class="font-extrabold text-brand-text text-xl">DESCARGA VERSIÓN 2.0</span>
                         </div>
                         <div
                             class="p-2 rounded-lg text-brand-accent bg-brand-accent/10 group-hover:bg-brand-accent group-hover:text-brand-dark transition-colors">
@@ -207,7 +211,7 @@
             </div>
         </div>
 
-        <div id="features" class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+        <div id="features" class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-20">
             <div class="cyber-card p-6 rounded-xl relative overflow-hidden group">
                 <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
                     <svg class="w-24 h-24 text-brand-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
