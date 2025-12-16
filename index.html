@@ -60,7 +60,6 @@
             background-size: 50px 50px;
         }
 
-        /* Estilo base para las tarjetas */
         .cyber-card {
             background-color: #10141A;
             border: 1px solid rgba(255, 56, 100, 0.1);
@@ -68,14 +67,12 @@
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* Efecto hover */
         .cyber-card:hover {
             border-color: #FF3864;
             transform: translateY(-4px);
             box-shadow: 0 10px 25px rgba(255, 56, 100, 0.2);
         }
 
-        /* Estilo para el botón de Plasma */
         .btn-plasma {
             position: relative;
             z-index: 10;
@@ -88,14 +85,12 @@
             box-shadow: 0 0 10px rgba(255, 56, 100, 0.5);
         }
 
-        /* Efecto hover en el botón */
         .btn-plasma:hover {
             background-color: #05070A;
             color: #FF3864;
             box-shadow: 0 0 20px rgba(255, 56, 100, 0.8);
         }
 
-        /* Efecto de degradado en el título */
         .title-effect {
             background: linear-gradient(90deg, #FFFFFF, #FF3864);
             -webkit-background-clip: text;
@@ -133,7 +128,7 @@
         </div>
     </nav>
 
-    <main class="flex-grow pt-28 pb-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto w-full">
+    <main class="flex-grow pt-24 sm:pt-28 pb-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto w-full">
 
         <div class="text-center mb-16">
 
@@ -142,15 +137,15 @@
                     class="absolute inset-0 bg-brand-accent blur-3xl opacity-30 group-hover:opacity-50 transition-opacity duration-500 rounded-full animate-border-flash">
                 </div>
                 <img src="assets/logo.png" alt="Cosm3 Firewall Logo"
-                    class="relative w-32 h-32 rounded-3xl border-4 border-brand-accent shadow-2xl transition-transform duration-300 object-cover bg-brand-card flex items-center justify-center group-hover:rotate-1 group-hover:scale-[1.03]">
+                    class="relative w-28 h-28 sm:w-32 sm:h-32 rounded-3xl border-4 border-brand-accent shadow-2xl transition-transform duration-300 object-cover bg-brand-card flex items-center justify-center group-hover:rotate-1 group-hover:scale-[1.03]">
             </a>
 
-            <h1 class="text-6xl sm:text-7xl md:text-8xl font-extrabold tracking-tight mb-4 uppercase">
+            <h1 class="text-5xl sm:text-7xl md:text-8xl font-extrabold tracking-tight mb-4 uppercase">
                 <span class="title-effect">COSM3_FIREWALL</span>
-                <span class="block text-brand-secondary/80 mt-4 font-light text-3xl sm:text-4xl">DEFENSA MÓVIL ACTIVA</span>
+                <span class="block text-brand-secondary/80 mt-4 font-light text-2xl sm:text-4xl">DEFENSA MÓVIL ACTIVA</span>
             </h1>
 
-            <p class="text-base sm:text-xl text-brand-text/70 max-w-3xl mx-auto mb-10 font-normal leading-relaxed">
+            <p class="text-sm sm:text-xl text-brand-text/70 max-w-3xl mx-auto mb-10 font-normal leading-relaxed">
                 El Firewall de Capa 7 redefinido. **Bloquea el tráfico malicioso**, monitorea las conexiones ocultas y
                 **aisla las amenazas** en tiempo real. Máxima privacidad, latencia mínima.
             </p>
@@ -160,16 +155,16 @@
                 <a href="https://www.mediafire.com/file/12af7ujb0hgpphq/Cosm3_Firewall_v2.apk/file" target="_blank"
                     class="group relative w-full flex items-center justify-between p-1 rounded-lg btn-plasma hover:shadow-brand-accent/70 transition-all duration-300 transform hover:-translate-y-1">
                     <div
-                        class="w-full h-14 bg-brand-dark rounded-[5px] flex items-center justify-between px-6 transition-all border border-brand-accent/0 group-hover:border-brand-accent/50">
+                        class="w-full h-12 sm:h-14 bg-brand-dark rounded-[5px] flex items-center justify-between px-4 sm:px-6 transition-all border border-brand-accent/0 group-hover:border-brand-accent/50">
                         <div class="flex flex-col items-start">
                             <span
                                 class="text-xs font-mono font-medium text-brand-accent uppercase tracking-widest">PROTOCOLO
                                 DE DESPLIEGUE</span>
-                            <span class="font-extrabold text-brand-text text-xl">DESCARGA VERSIÓN 2.0</span>
+                            <span class="font-extrabold text-brand-text text-lg sm:text-xl">DESCARGA VERSIÓN 2.0</span>
                         </div>
                         <div
                             class="p-2 rounded-lg text-brand-accent bg-brand-accent/10 group-hover:bg-brand-accent group-hover:text-brand-dark transition-colors">
-                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
                             </svg>
@@ -195,12 +190,12 @@
         <div
             class="relative rounded-xl border border-brand-accent/50 bg-brand-card p-1 shadow-2xl mx-auto max-w-4xl overflow-hidden mb-24">
             <div class="absolute inset-0 bg-brand-accent/5 opacity-10 blur-xl animate-pulse-subtle"></div>
-            <div class="flex items-center gap-2 px-4 py-3 border-b border-brand-accent/20 bg-brand-dark font-mono">
-                <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+            <div class="flex items-center gap-2 px-3 sm:px-4 py-2 sm:py-3 border-b border-brand-accent/20 bg-brand-dark font-mono">
+                <div class="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-red-500"></div>
+                <div class="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-yellow-500"></div>
+                <div class="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-green-500"></div>
                 <div
-                    class="ml-4 px-3 py-1 bg-brand-accent/10 rounded text-[10px] text-brand-accent border border-brand-accent/20 flex-grow text-center animate-pulse-subtle">
+                    class="ml-2 sm:ml-4 px-2 py-0.5 sm:px-3 sm:py-1 bg-brand-accent/10 rounded text-[8px] sm:text-[10px] text-brand-accent border border-brand-accent/20 flex-grow text-center animate-pulse-subtle">
                     ACCESS_LOG: DENY_ALL_PORTS [root@mobile-host]</div>
             </div>
             <div class="relative aspect-video bg-black">
