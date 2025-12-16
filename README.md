@@ -1,42 +1,78 @@
-# 🛡️ Cosme Firewall - Tu Barrera Defensiva Inteligente
+# 🛡️ Cosme Firewall - Control de Red en Android
 
-![Etiqueta de Estado - Puedes agregar una etiqueta de GitHub Actions/Build Status aquí](https://img.shields.io/badge/Estado-Activo-success)
-![Etiqueta de Licencia](https://img.shields.io/badge/Licencia-MIT-blue)
-![Etiqueta de Versión](https://img.shields.io/badge/Versión-v1.0.0-orange)
+![Etiqueta de Estado](https://img.shields.io/badge/Estado-Beta%20Privada-yellow)
+![Etiqueta de Licencia](https://img.shields.io/badge/Licencia-GPLv3-blue)
+![Etiqueta de Plataforma](https://img.shields.io/badge/Plataforma-Android%205.0%2B-green)
 
 ## 🌟 Resumen del Proyecto
 
-**Cosme Firewall** es una solución de seguridad perimetral de código abierto diseñada para ofrecer una protección robusta y configurable contra amenazas de red comunes. Implementado con un enfoque en el rendimiento y la facilidad de uso, Cosme permite a los usuarios **filtrar el tráfico, monitorear la actividad de la red en tiempo real** y **aplicar políticas de seguridad dinámicas**.
+**Cosme Firewall** es una aplicación de código abierto para Android diseñada para dar a los usuarios **control granular** sobre el tráfico de red de sus aplicaciones. Utilizando la API de VPN local de Android (modo No-Root) o las capacidades de *iptables* (modo Root), Cosme permite **bloquear conexiones no deseadas**, **reducir el consumo de datos** y **mejorar la privacidad** del dispositivo.
 
-**Mi rol como desarrollador:** Este proyecto demuestra mis habilidades en (menciona tus áreas clave, p. ej.: **seguridad de redes**, **programación de bajo nivel** y **manejo de la infraestructura de despliegue**).
+**Relevancia en Ciberseguridad/Flutter:** Este proyecto demuestra mi conocimiento profundo de la **seguridad móvil en Android**, la gestión del tráfico a nivel de sistema, y mi habilidad para desarrollar interfaces de usuario robustas y funcionales usando **Flutter (para la UI)** y lógica de red nativa (para la función de firewall).
 
 ## ✨ Características Principales
 
-* **Inspección de Paquetes con Estado (Stateful Inspection):** Monitorea el estado de las conexiones activas para tomar decisiones de filtrado más inteligentes y seguras.
-* **Filtrado por Capa de Aplicación:** Capacidad de filtrar tráfico basado en protocolos de capa superior (ej. HTTP, DNS).
-* **Sistema de Detección de Intrusiones (IDS Básico):** Reglas predefinidas para detectar patrones de ataque comunes (ej. escaneos de puertos, paquetes malformados).
-* **Registro Detallado (Logging):** Generación de logs con marca de tiempo para análisis forense y auditoría de seguridad.
-* **Interfaz de Configuración (Pendiente/Roadmap):** Se planea una interfaz de gestión amigable para facilitar la administración de reglas.
+* **Filtrado por Aplicación:** Bloquea el acceso a internet (Wi-Fi y/o datos móviles) por aplicación individual.
+* **Modo No-Root (VPN Service):** Utiliza el servicio VPN local de Android para interceptar y filtrar el tráfico sin necesidad de acceso Root.
+* **Monitoreo en Tiempo Real:** Interfaz clara (gracias a Flutter) para visualizar qué aplicaciones están intentando acceder a la red.
+* **Bajo Consumo:** Optimizado para funcionar en segundo plano con un impacto mínimo en la batería.
+* **Exportación de Reglas:** Permite guardar y cargar configuraciones de reglas de firewall.
 
 ## 💻 Tecnologías Utilizadas
 
-* **Lenguaje Principal:** C / Python (Ajusta según lo que uses para el firewall y la lógica)
-* **Networking Libraries:** (p. ej., `pcap`, `scapy`, *raw sockets*)
-* **Contenedorización/Despliegue:** Docker (si aplica)
-* **Base de Datos (si aplica):** SQLite / PostgreSQL
+* **Frontend (UI):** **Flutter** (Dart)
+* **Backend (Lógica de Red):** Kotlin/Java para la implementación del `VpnService` de Android.
+* **Base de Datos (Reglas):** SQLite (o Hive/Isar si usas Flutter solo)
+* **Despliegue/Distribución:** Archivo **APK** (distribución vía GitHub Releases, F-Droid, o Google Play).
 
 ## 🛠️ Instalación y Uso
 
-Sigue estos pasos para poner en marcha Cosme Firewall en tu entorno.
+### 📥 Descarga la Aplicación (APK)
 
-### Requisitos Previos
+La última versión estable está disponible en la sección **[Releases]** de este repositorio:
 
-* Sistema Operativo compatible (Linux/Unix recomendado).
-* Git instalado.
-* (Menciona dependencias de lenguaje, p. ej.: Python 3.x, compilador de C).
+* [Descargar Cosme-Firewall-v1.0.0.apk](URL-al-APK-en-Release) *(Reemplaza con el enlace real)*
 
-### Clonar el Repositorio
+**Pasos de Instalación:**
 
-```bash
-git clone [https://github.com/tu_usuario/Cosme-Firewall.git](https://github.com/tu_usuario/Cosme-Firewall.git)
-cd Cosme-Firewall
+1.  Descarga el archivo `Cosme-Firewall.apk` en tu dispositivo Android.
+2.  Asegúrate de tener habilitada la opción "Instalar aplicaciones de fuentes desconocidas".
+3.  Instala el APK.
+4.  Al abrir, **debes aceptar la solicitud de conexión VPN** para que el firewall sin Root pueda operar.
+
+### ⚙️ Compilar desde el Código Fuente
+
+Si quieres compilar la aplicación tú mismo:
+
+1.  **Clonar el Repositorio:**
+    ```bash
+    git clone [https://github.com/tu_usuario/Cosme-Firewall.git](https://github.com/tu_usuario/Cosme-Firewall.git)
+    cd Cosme-Firewall
+    ```
+2.  **Abrir con Android Studio/VS Code:** Abre la carpeta del proyecto.
+3.  **Ejecutar Build:**
+    ```bash
+    # Si usas Flutter
+    flutter build apk --release
+    # O compila directamente desde Android Studio.
+    ```
+    El archivo APK se encontrará en `build/app/outputs/flutter-apk/app-release.apk`.
+
+## 🗺️ Roadmap
+
+* **Soporte a IPv6:** Extender el filtrado a paquetes IPv6.
+* **Reglas Geográficas:** Opción de bloquear conexiones a países específicos.
+* **Detección de Spyware:** Implementar listas negras actualizadas para bloquear servidores espía conocidos.
+* **Interfaz de Monitorización Avanzada (Flutter):** Dashboard con gráficos de flujo de datos y alertas.
+
+## 🤝 Contribuciones y Reporte de Bugs
+
+Tu experiencia es valiosa. Si encuentras un error o quieres sugerir una mejora, por favor, abre un **[Issue]** o envía un **[Pull Request]**.
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia **GPLv3**. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+
+---
+
+**Siguiente paso:** Para que los reclutadores puedan descargar y probar tu APK, necesitas subirla a la sección **Releases** de tu repositorio. ¿Quieres que te muestre cómo se hace?
